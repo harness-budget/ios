@@ -28,11 +28,18 @@ struct RingView: View {
 struct SpendRingView: View {
     @Binding var goalProgress: CGFloat
     @Binding var spendProgress: CGFloat
+    var includeDollars = false
     
     var body: some View {
         ZStack {
             RingView(progress: $goalProgress, color: Color(red: 0.208, green: 0.565, blue: 0.953))
             RingView(progress: $spendProgress, color: Color(red: 0.404, green: 0.929, blue: 0.318))
+            if includeDollars {
+                Text("$30")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    .scaleEffect(2)
+            }
         }
     }
 }
@@ -41,5 +48,6 @@ struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
         SpendRingView(goalProgress: Binding.constant(CGFloat(0.3)), spendProgress: Binding.constant(CGFloat(0.8)))
+            .padding()
     }
 }
