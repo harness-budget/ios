@@ -9,10 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .stroke(Color.orange, lineWidth: 10)
-        }.frame(idealWidth: 300, idealHeight: 300, alignment: .center)
+		SpendRingView(goalProgress: Binding.constant(CGFloat(0.50)), spendProgress: Binding.constant(CGFloat(0.20)), fundsRemaining: Binding.constant(30024))
     }
 }
 
