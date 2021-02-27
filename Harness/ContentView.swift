@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Circle()
+                .stroke(Color.orange, lineWidth: 10)
+        }.frame(idealWidth: 300, idealHeight: 300, alignment: .center)
     }
 }
 
