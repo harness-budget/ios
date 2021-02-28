@@ -17,6 +17,13 @@ public final class DashboardQuery: GraphQLQuery {
         }
         safeToSpendFraction
         goalMetFraction
+        envelopes {
+          __typename
+          id
+          name
+          goalFractional
+          balanceFractional
+        }
       }
     }
     """
@@ -63,6 +70,7 @@ public final class DashboardQuery: GraphQLQuery {
           GraphQLField("safeToSpend", type: .nonNull(.object(SafeToSpend.selections))),
           GraphQLField("safeToSpendFraction", type: .nonNull(.scalar(Double.self))),
           GraphQLField("goalMetFraction", type: .nonNull(.scalar(Double.self))),
+          GraphQLField("envelopes", type: .nonNull(.list(.nonNull(.object(Envelope.selections))))),
         ]
       }
 
@@ -72,8 +80,8 @@ public final class DashboardQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(safeToSpend: SafeToSpend, safeToSpendFraction: Double, goalMetFraction: Double) {
-        self.init(unsafeResultMap: ["__typename": "User", "safeToSpend": safeToSpend.resultMap, "safeToSpendFraction": safeToSpendFraction, "goalMetFraction": goalMetFraction])
+      public init(safeToSpend: SafeToSpend, safeToSpendFraction: Double, goalMetFraction: Double, envelopes: [Envelope]) {
+        self.init(unsafeResultMap: ["__typename": "User", "safeToSpend": safeToSpend.resultMap, "safeToSpendFraction": safeToSpendFraction, "goalMetFraction": goalMetFraction, "envelopes": envelopes.map { (value: Envelope) -> ResultMap in value.resultMap }])
       }
 
       public var __typename: String {
@@ -115,6 +123,15 @@ public final class DashboardQuery: GraphQLQuery {
         }
       }
 
+      public var envelopes: [Envelope] {
+        get {
+          return (resultMap["envelopes"] as! [ResultMap]).map { (value: ResultMap) -> Envelope in Envelope(unsafeResultMap: value) }
+        }
+        set {
+          resultMap.updateValue(newValue.map { (value: Envelope) -> ResultMap in value.resultMap }, forKey: "envelopes")
+        }
+      }
+
       public struct SafeToSpend: GraphQLSelectionSet {
         public static let possibleTypes: [String] = ["Money"]
 
@@ -150,6 +167,75 @@ public final class DashboardQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "fractional")
+          }
+        }
+      }
+
+      public struct Envelope: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Envelope"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+            GraphQLField("name", type: .scalar(String.self)),
+            GraphQLField("goalFractional", type: .scalar(Int.self)),
+            GraphQLField("balanceFractional", type: .scalar(Int.self)),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: GraphQLID, name: String? = nil, goalFractional: Int? = nil, balanceFractional: Int? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Envelope", "id": id, "name": name, "goalFractional": goalFractional, "balanceFractional": balanceFractional])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: GraphQLID {
+          get {
+            return resultMap["id"]! as! GraphQLID
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var name: String? {
+          get {
+            return resultMap["name"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
+          }
+        }
+
+        public var goalFractional: Int? {
+          get {
+            return resultMap["goalFractional"] as? Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "goalFractional")
+          }
+        }
+
+        public var balanceFractional: Int? {
+          get {
+            return resultMap["balanceFractional"] as? Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "balanceFractional")
           }
         }
       }

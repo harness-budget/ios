@@ -4,5 +4,12 @@ query Dashboard {
         safeToSpend { fractional }
         safeToSpendFraction
         goalMetFraction
+        
+        envelopes {
+          id
+          name
+          goalFractional
+          balanceFractional
+        }
     }
 }
