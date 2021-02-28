@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DashboardView: View {
+    var network: Network
 	var body: some View {
 		NavigationView {
 			VStack{
@@ -50,6 +51,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+        DashboardView(network: Network())
 	}
 }

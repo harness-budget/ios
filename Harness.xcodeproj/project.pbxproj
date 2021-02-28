@@ -23,8 +23,8 @@
 		7AF872B625EB1D160040C76B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872B525EB1D160040C76B /* Tests_macOS.swift */; };
 		7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
 		7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
-		7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
-		7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
+		7AF872BA25EB1D160040C76B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* DashboardView.swift */; };
+		7AF872BB25EB1D160040C76B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* DashboardView.swift */; };
 		7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 		7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 		7AF872D125EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */; };
@@ -35,6 +35,9 @@
 		B5623C1D25EB79D5004B27D1 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */; };
 		B5623C2225EB7F45004B27D1 /* LoginWithPhoneCode.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */; };
 		B5623C2325EB7F45004B27D1 /* LoginWithPhoneCode.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */; };
+		B5623C2925EB933E004B27D1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B5623C2825EB933E004B27D1 /* KeychainAccess */; };
+		B5623C2E25EB962F004B27D1 /* DashboardQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */; };
+		B5623C2F25EB962F004B27D1 /* DashboardQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +79,7 @@
 		7A4BBF9425EB430700389944 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextView.swift; sourceTree = "<group>"; };
 		7AF8728F25EB1D140040C76B /* HarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessApp.swift; sourceTree = "<group>"; };
-		7AF8729025EB1D140040C76B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AF8729025EB1D140040C76B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7AF8729125EB1D150040C76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF8729625EB1D150040C76B /* Harness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF8729925EB1D150040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		B5623C1525EB741D004B27D1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoginWithPhoneCode.graphql; sourceTree = "<group>"; };
+		B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DashboardQuery.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			files = (
 				7AF872D125EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Frameworks */,
 				497E5AE925EB65330088B1BD /* Apollo-Dynamic in Frameworks */,
+				B5623C2925EB933E004B27D1 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +150,7 @@
 			children = (
 				B5623C1525EB741D004B27D1 /* API.swift */,
 				7AF8728F25EB1D140040C76B /* HarnessApp.swift */,
-				7AF8729025EB1D140040C76B /* ContentView.swift */,
+				7AF8729025EB1D140040C76B /* DashboardView.swift */,
 				7A4BBF9425EB430700389944 /* LoginView.swift */,
 				7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */,
 				7AF8729125EB1D150040C76B /* Assets.xcassets */,
@@ -154,6 +159,7 @@
 				4905EF3825EB6BE9005E3A19 /* Network.swift */,
 				B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */,
 				B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */,
+				B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			packageProductDependencies = (
 				7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */,
 				497E5AE825EB65330088B1BD /* Apollo-Dynamic */,
+				B5623C2825EB933E004B27D1 /* KeychainAccess */,
 			);
 			productName = "Harness (iOS)";
 			productReference = 7AF8729625EB1D150040C76B /* Harness.app */;
@@ -320,6 +327,7 @@
 			packageReferences = (
 				7AF872CF25EB4FAC0040C76B /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 				497E5AE725EB65330088B1BD /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				B5623C2725EB933E004B27D1 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 7AF8729725EB1D150040C76B /* Products */;
 			projectDirPath = "";
@@ -339,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5623C2225EB7F45004B27D1 /* LoginWithPhoneCode.graphql in Resources */,
+				B5623C2E25EB962F004B27D1 /* DashboardQuery.graphql in Resources */,
 				497E5AFC25EB679E0088B1BD /* SendLoginCode.graphql in Resources */,
 				7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
@@ -349,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5623C2325EB7F45004B27D1 /* LoginWithPhoneCode.graphql in Resources */,
+				B5623C2F25EB962F004B27D1 /* DashboardQuery.graphql in Resources */,
 				497E5AFD25EB679E0088B1BD /* SendLoginCode.graphql in Resources */,
 				7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
@@ -396,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872BA25EB1D160040C76B /* DashboardView.swift in Sources */,
 				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
 				B5623C1C25EB79D5004B27D1 /* EnterCodeView.swift in Sources */,
 				4905EF3925EB6BE9005E3A19 /* Network.swift in Sources */,
@@ -411,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872BB25EB1D160040C76B /* DashboardView.swift in Sources */,
 				7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */,
 				B5623C1D25EB79D5004B27D1 /* EnterCodeView.swift in Sources */,
 				4905EF3A25EB6BE9005E3A19 /* Network.swift in Sources */,
@@ -814,6 +824,14 @@
 				minimumVersion = 3.3.3;
 			};
 		};
+		B5623C2725EB933E004B27D1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -826,6 +844,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7AF872CF25EB4FAC0040C76B /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
 			productName = "PhoneNumberKit-Dynamic";
+		};
+		B5623C2825EB933E004B27D1 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5623C2725EB933E004B27D1 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

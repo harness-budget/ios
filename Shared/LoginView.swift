@@ -9,9 +9,9 @@ import SwiftUI
 import PhoneNumberKit
 
 struct LoginView: View {
-    @State var phoneNumber = "+15128409935"
+    @State private var phoneNumber: String? = nil
     
-    @State private var shouldEnterCode = false
+    var network: Network
     
     var onFinish: (String) -> ()
 
@@ -19,16 +19,25 @@ struct LoginView: View {
 		NavigationView {
 			VStack(alignment: .leading) {
 				Text("We're going to need to send your phone a verification code. We won't sell your information.")
-				PhoneTextView()
-					.padding(.vertical, 64.0)
+				let phone_number = PhoneTextView()
+					
+                phone_number.padding(.vertical, 64.0)
 					.fixedSize(horizontal: false, vertical: true)
+                
 				Spacer()
                 
-                NavigationLink("", destination: EnterCodeView(phoneNumber: $phoneNumber, onFinish: onFinish), isActive: $shouldEnterCode)
+                if phoneNumber != nil {
+                    NavigationLink("", destination: EnterCodeView(
+                        phoneNumber: phoneNumber!,
+                        network: network,
+                        onFinish: onFinish
+                    ), isActive: Binding.constant(true))
+                }
 				
                 Button (action: {
-                    Network.shared.apollo.perform(mutation: SendLoginCodeMutation(phone: phoneNumber), resultHandler: {_ in
-                        shouldEnterCode = true
+                    phoneNumber = PhoneNumberKit().format(phone_number.textView.phoneNumber!, toType: .e164);
+                    network.apollo.perform(mutation: SendLoginCodeMutation(phone: phoneNumber!), resultHandler: {_ in
+                        
                     })
                 }, label: {
 					HStack {
@@ -53,6 +62,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView( onFinish: {_ in })
+        LoginView( network: Network(), onFinish: {_ in })
     }
 }
