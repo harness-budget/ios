@@ -9,6 +9,11 @@ import SwiftUI
 import PhoneNumberKit
 
 struct LoginView: View {
+    @State var phoneNumber = "+15128409935"
+    
+    @State private var shouldEnterCode = false
+    
+    var onFinish: (String) -> ()
 
     var body: some View {
 		NavigationView {
@@ -18,8 +23,14 @@ struct LoginView: View {
 					.padding(.vertical, 64.0)
 					.fixedSize(horizontal: false, vertical: true)
 				Spacer()
+                
+                NavigationLink("", destination: EnterCodeView(phoneNumber: $phoneNumber, onFinish: onFinish), isActive: $shouldEnterCode)
 				
-				Button (action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button (action: {
+                    Network.shared.apollo.perform(mutation: SendLoginCodeMutation(phone: phoneNumber), resultHandler: {_ in
+                        shouldEnterCode = true
+                    })
+                }, label: {
 					HStack {
 						Spacer()
 						Text("Next")
@@ -42,6 +53,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView( onFinish: {_ in })
     }
 }

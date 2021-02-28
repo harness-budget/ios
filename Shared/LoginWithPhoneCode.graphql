@@ -1,0 +1,7 @@
+
+mutation LoginWithPhoneCode($phoneNumber: String!, $code: String!) {
+  loginWithPhoneCode(input: { phoneNumber: $phoneNumber, code: $code }) {
+    errors
+    authToken
+  }
+}
