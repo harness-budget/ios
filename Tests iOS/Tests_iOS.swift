@@ -1,13 +1,13 @@
 //
-//  HarnessUITests.swift
-//  HarnessUITests
+//  Tests_iOS.swift
+//  Tests iOS
 //
-//  Created by Ben Aubin on 2/27/21.
+//  Created by Charlie Welsh on 2/27/21.
 //
 
 import XCTest
 
-class HarnessUITests: XCTestCase {
+class Tests_iOS: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,7 +32,7 @@ class HarnessUITests: XCTestCase {
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()

@@ -7,64 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5A6F44825EAD59100AD24BC /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6F44725EAD59100AD24BC /* HarnessApp.swift */; };
-		B5A6F44A25EAD59100AD24BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6F44925EAD59100AD24BC /* ContentView.swift */; };
-		B5A6F44C25EAD59300AD24BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A6F44B25EAD59300AD24BC /* Assets.xcassets */; };
-		B5A6F44F25EAD59300AD24BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A6F44E25EAD59300AD24BC /* Preview Assets.xcassets */; };
-		B5A6F45A25EAD59300AD24BC /* HarnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6F45925EAD59300AD24BC /* HarnessTests.swift */; };
-		B5A6F46525EAD59300AD24BC /* HarnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6F46425EAD59300AD24BC /* HarnessUITests.swift */; };
-		B5A6F47625EAD6C200AD24BC /* SpendRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6F47525EAD6C200AD24BC /* SpendRingView.swift */; };
+		7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
+		7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
+		7AF872AB25EB1D150040C76B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872AA25EB1D150040C76B /* Tests_iOS.swift */; };
+		7AF872B625EB1D160040C76B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872B525EB1D160040C76B /* Tests_macOS.swift */; };
+		7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
+		7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
+		7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
+		7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
+		7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
+		7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B5A6F45625EAD59300AD24BC /* PBXContainerItemProxy */ = {
+		7AF872A725EB1D150040C76B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B5A6F43C25EAD59100AD24BC /* Project object */;
+			containerPortal = 7AF8728A25EB1D140040C76B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B5A6F44325EAD59100AD24BC;
-			remoteInfo = Harness;
+			remoteGlobalIDString = 7AF8729525EB1D150040C76B;
+			remoteInfo = "Harness (iOS)";
 		};
-		B5A6F46125EAD59300AD24BC /* PBXContainerItemProxy */ = {
+		7AF872B225EB1D160040C76B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B5A6F43C25EAD59100AD24BC /* Project object */;
+			containerPortal = 7AF8728A25EB1D140040C76B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B5A6F44325EAD59100AD24BC;
-			remoteInfo = Harness;
+			remoteGlobalIDString = 7AF8729D25EB1D150040C76B;
+			remoteInfo = "Harness (macOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B5A6F44425EAD59100AD24BC /* Harness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harness.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5A6F44725EAD59100AD24BC /* HarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessApp.swift; sourceTree = "<group>"; };
-		B5A6F44925EAD59100AD24BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B5A6F44B25EAD59300AD24BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B5A6F44E25EAD59300AD24BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B5A6F45025EAD59300AD24BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5A6F45525EAD59300AD24BC /* HarnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5A6F45925EAD59300AD24BC /* HarnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessTests.swift; sourceTree = "<group>"; };
-		B5A6F45B25EAD59300AD24BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5A6F46025EAD59300AD24BC /* HarnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5A6F46425EAD59300AD24BC /* HarnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessUITests.swift; sourceTree = "<group>"; };
-		B5A6F46625EAD59300AD24BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5A6F47525EAD6C200AD24BC /* SpendRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendRingView.swift; sourceTree = "<group>"; };
+		7A4BBF8D25EB22F000389944 /* RingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViews.swift; sourceTree = "<group>"; };
+		7AF8728F25EB1D140040C76B /* HarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessApp.swift; sourceTree = "<group>"; };
+		7AF8729025EB1D140040C76B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AF8729125EB1D150040C76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AF8729625EB1D150040C76B /* Harness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF8729925EB1D150040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF8729E25EB1D150040C76B /* Harness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF872A025EB1D150040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF872A125EB1D150040C76B /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		7AF872A625EB1D150040C76B /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF872AA25EB1D150040C76B /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		7AF872AC25EB1D150040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF872B125EB1D160040C76B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF872B525EB1D160040C76B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		7AF872B725EB1D160040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B5A6F44125EAD59100AD24BC /* Frameworks */ = {
+		7AF8729325EB1D150040C76B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45225EAD59300AD24BC /* Frameworks */ = {
+		7AF8729B25EB1D150040C76B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45D25EAD59300AD24BC /* Frameworks */ = {
+		7AF872A325EB1D150040C76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AF872AE25EB1D160040C76B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,144 +86,174 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B5A6F43B25EAD59100AD24BC = {
+		7AF8728925EB1D140040C76B = {
 			isa = PBXGroup;
 			children = (
-				B5A6F44625EAD59100AD24BC /* Harness */,
-				B5A6F45825EAD59300AD24BC /* HarnessTests */,
-				B5A6F46325EAD59300AD24BC /* HarnessUITests */,
-				B5A6F44525EAD59100AD24BC /* Products */,
+				7AF8728E25EB1D140040C76B /* Shared */,
+				7AF8729825EB1D150040C76B /* iOS */,
+				7AF8729F25EB1D150040C76B /* macOS */,
+				7AF872A925EB1D150040C76B /* Tests iOS */,
+				7AF872B425EB1D160040C76B /* Tests macOS */,
+				7AF8729725EB1D150040C76B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B5A6F44525EAD59100AD24BC /* Products */ = {
+		7AF8728E25EB1D140040C76B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B5A6F44425EAD59100AD24BC /* Harness.app */,
-				B5A6F45525EAD59300AD24BC /* HarnessTests.xctest */,
-				B5A6F46025EAD59300AD24BC /* HarnessUITests.xctest */,
+				7AF8728F25EB1D140040C76B /* HarnessApp.swift */,
+				7AF8729025EB1D140040C76B /* ContentView.swift */,
+				7AF8729125EB1D150040C76B /* Assets.xcassets */,
+				7A4BBF8D25EB22F000389944 /* RingViews.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7AF8729725EB1D150040C76B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AF8729625EB1D150040C76B /* Harness.app */,
+				7AF8729E25EB1D150040C76B /* Harness.app */,
+				7AF872A625EB1D150040C76B /* Tests iOS.xctest */,
+				7AF872B125EB1D160040C76B /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5A6F44625EAD59100AD24BC /* Harness */ = {
+		7AF8729825EB1D150040C76B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B5A6F44725EAD59100AD24BC /* HarnessApp.swift */,
-				B5A6F44925EAD59100AD24BC /* ContentView.swift */,
-				B5A6F44B25EAD59300AD24BC /* Assets.xcassets */,
-				B5A6F45025EAD59300AD24BC /* Info.plist */,
-				B5A6F44D25EAD59300AD24BC /* Preview Content */,
-				B5A6F47525EAD6C200AD24BC /* SpendRingView.swift */,
+				7AF8729925EB1D150040C76B /* Info.plist */,
 			);
-			path = Harness;
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		B5A6F44D25EAD59300AD24BC /* Preview Content */ = {
+		7AF8729F25EB1D150040C76B /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				B5A6F44E25EAD59300AD24BC /* Preview Assets.xcassets */,
+				7AF872A025EB1D150040C76B /* Info.plist */,
+				7AF872A125EB1D150040C76B /* macOS.entitlements */,
 			);
-			path = "Preview Content";
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		B5A6F45825EAD59300AD24BC /* HarnessTests */ = {
+		7AF872A925EB1D150040C76B /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B5A6F45925EAD59300AD24BC /* HarnessTests.swift */,
-				B5A6F45B25EAD59300AD24BC /* Info.plist */,
+				7AF872AA25EB1D150040C76B /* Tests_iOS.swift */,
+				7AF872AC25EB1D150040C76B /* Info.plist */,
 			);
-			path = HarnessTests;
+			path = "Tests iOS";
 			sourceTree = "<group>";
 		};
-		B5A6F46325EAD59300AD24BC /* HarnessUITests */ = {
+		7AF872B425EB1D160040C76B /* Tests macOS */ = {
 			isa = PBXGroup;
 			children = (
-				B5A6F46425EAD59300AD24BC /* HarnessUITests.swift */,
-				B5A6F46625EAD59300AD24BC /* Info.plist */,
+				7AF872B525EB1D160040C76B /* Tests_macOS.swift */,
+				7AF872B725EB1D160040C76B /* Info.plist */,
 			);
-			path = HarnessUITests;
+			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5A6F44325EAD59100AD24BC /* Harness */ = {
+		7AF8729525EB1D150040C76B /* Harness (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5A6F46925EAD59300AD24BC /* Build configuration list for PBXNativeTarget "Harness" */;
+			buildConfigurationList = 7AF872C025EB1D160040C76B /* Build configuration list for PBXNativeTarget "Harness (iOS)" */;
 			buildPhases = (
-				B5A6F44025EAD59100AD24BC /* Sources */,
-				B5A6F44125EAD59100AD24BC /* Frameworks */,
-				B5A6F44225EAD59100AD24BC /* Resources */,
+				7AF8729225EB1D150040C76B /* Sources */,
+				7AF8729325EB1D150040C76B /* Frameworks */,
+				7AF8729425EB1D150040C76B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Harness;
-			productName = Harness;
-			productReference = B5A6F44425EAD59100AD24BC /* Harness.app */;
+			name = "Harness (iOS)";
+			productName = "Harness (iOS)";
+			productReference = 7AF8729625EB1D150040C76B /* Harness.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B5A6F45425EAD59300AD24BC /* HarnessTests */ = {
+		7AF8729D25EB1D150040C76B /* Harness (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5A6F46C25EAD59300AD24BC /* Build configuration list for PBXNativeTarget "HarnessTests" */;
+			buildConfigurationList = 7AF872C325EB1D160040C76B /* Build configuration list for PBXNativeTarget "Harness (macOS)" */;
 			buildPhases = (
-				B5A6F45125EAD59300AD24BC /* Sources */,
-				B5A6F45225EAD59300AD24BC /* Frameworks */,
-				B5A6F45325EAD59300AD24BC /* Resources */,
+				7AF8729A25EB1D150040C76B /* Sources */,
+				7AF8729B25EB1D150040C76B /* Frameworks */,
+				7AF8729C25EB1D150040C76B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B5A6F45725EAD59300AD24BC /* PBXTargetDependency */,
 			);
-			name = HarnessTests;
-			productName = HarnessTests;
-			productReference = B5A6F45525EAD59300AD24BC /* HarnessTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Harness (macOS)";
+			productName = "Harness (macOS)";
+			productReference = 7AF8729E25EB1D150040C76B /* Harness.app */;
+			productType = "com.apple.product-type.application";
 		};
-		B5A6F45F25EAD59300AD24BC /* HarnessUITests */ = {
+		7AF872A525EB1D150040C76B /* Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5A6F46F25EAD59300AD24BC /* Build configuration list for PBXNativeTarget "HarnessUITests" */;
+			buildConfigurationList = 7AF872C625EB1D160040C76B /* Build configuration list for PBXNativeTarget "Tests iOS" */;
 			buildPhases = (
-				B5A6F45C25EAD59300AD24BC /* Sources */,
-				B5A6F45D25EAD59300AD24BC /* Frameworks */,
-				B5A6F45E25EAD59300AD24BC /* Resources */,
+				7AF872A225EB1D150040C76B /* Sources */,
+				7AF872A325EB1D150040C76B /* Frameworks */,
+				7AF872A425EB1D150040C76B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B5A6F46225EAD59300AD24BC /* PBXTargetDependency */,
+				7AF872A825EB1D150040C76B /* PBXTargetDependency */,
 			);
-			name = HarnessUITests;
-			productName = HarnessUITests;
-			productReference = B5A6F46025EAD59300AD24BC /* HarnessUITests.xctest */;
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 7AF872A625EB1D150040C76B /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7AF872B025EB1D160040C76B /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AF872C925EB1D160040C76B /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				7AF872AD25EB1D160040C76B /* Sources */,
+				7AF872AE25EB1D160040C76B /* Frameworks */,
+				7AF872AF25EB1D160040C76B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AF872B325EB1D160040C76B /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 7AF872B125EB1D160040C76B /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B5A6F43C25EAD59100AD24BC /* Project object */ = {
+		7AF8728A25EB1D140040C76B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					B5A6F44325EAD59100AD24BC = {
-						CreatedOnToolsVersion = 12.4;
+					7AF8729525EB1D150040C76B = {
+						CreatedOnToolsVersion = 12.5;
 					};
-					B5A6F45425EAD59300AD24BC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = B5A6F44325EAD59100AD24BC;
+					7AF8729D25EB1D150040C76B = {
+						CreatedOnToolsVersion = 12.5;
 					};
-					B5A6F45F25EAD59300AD24BC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = B5A6F44325EAD59100AD24BC;
+					7AF872A525EB1D150040C76B = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7AF8729525EB1D150040C76B;
+					};
+					7AF872B025EB1D160040C76B = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7AF8729D25EB1D150040C76B;
 					};
 				};
 			};
-			buildConfigurationList = B5A6F43F25EAD59100AD24BC /* Build configuration list for PBXProject "Harness" */;
+			buildConfigurationList = 7AF8728D25EB1D140040C76B /* Build configuration list for PBXProject "Harness" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,36 +261,44 @@
 				en,
 				Base,
 			);
-			mainGroup = B5A6F43B25EAD59100AD24BC;
-			productRefGroup = B5A6F44525EAD59100AD24BC /* Products */;
+			mainGroup = 7AF8728925EB1D140040C76B;
+			productRefGroup = 7AF8729725EB1D150040C76B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5A6F44325EAD59100AD24BC /* Harness */,
-				B5A6F45425EAD59300AD24BC /* HarnessTests */,
-				B5A6F45F25EAD59300AD24BC /* HarnessUITests */,
+				7AF8729525EB1D150040C76B /* Harness (iOS) */,
+				7AF8729D25EB1D150040C76B /* Harness (macOS) */,
+				7AF872A525EB1D150040C76B /* Tests iOS */,
+				7AF872B025EB1D160040C76B /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B5A6F44225EAD59100AD24BC /* Resources */ = {
+		7AF8729425EB1D150040C76B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A6F44F25EAD59300AD24BC /* Preview Assets.xcassets in Resources */,
-				B5A6F44C25EAD59300AD24BC /* Assets.xcassets in Resources */,
+				7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45325EAD59300AD24BC /* Resources */ = {
+		7AF8729C25EB1D150040C76B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AF872A425EB1D150040C76B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45E25EAD59300AD24BC /* Resources */ = {
+		7AF872AF25EB1D160040C76B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,49 +308,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B5A6F44025EAD59100AD24BC /* Sources */ = {
+		7AF8729225EB1D150040C76B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A6F44A25EAD59100AD24BC /* ContentView.swift in Sources */,
-				B5A6F44825EAD59100AD24BC /* HarnessApp.swift in Sources */,
-				B5A6F47625EAD6C200AD24BC /* SpendRingView.swift in Sources */,
+				7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
+				7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45125EAD59300AD24BC /* Sources */ = {
+		7AF8729A25EB1D150040C76B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A6F45A25EAD59300AD24BC /* HarnessTests.swift in Sources */,
+				7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */,
+				7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A6F45C25EAD59300AD24BC /* Sources */ = {
+		7AF872A225EB1D150040C76B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5A6F46525EAD59300AD24BC /* HarnessUITests.swift in Sources */,
+				7AF872AB25EB1D150040C76B /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AF872AD25EB1D160040C76B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AF872B625EB1D160040C76B /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B5A6F45725EAD59300AD24BC /* PBXTargetDependency */ = {
+		7AF872A825EB1D150040C76B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5A6F44325EAD59100AD24BC /* Harness */;
-			targetProxy = B5A6F45625EAD59300AD24BC /* PBXContainerItemProxy */;
+			target = 7AF8729525EB1D150040C76B /* Harness (iOS) */;
+			targetProxy = 7AF872A725EB1D150040C76B /* PBXContainerItemProxy */;
 		};
-		B5A6F46225EAD59300AD24BC /* PBXTargetDependency */ = {
+		7AF872B325EB1D160040C76B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B5A6F44325EAD59100AD24BC /* Harness */;
-			targetProxy = B5A6F46125EAD59300AD24BC /* PBXContainerItemProxy */;
+			target = 7AF8729D25EB1D150040C76B /* Harness (macOS) */;
+			targetProxy = 7AF872B225EB1D160040C76B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B5A6F46725EAD59300AD24BC /* Debug */ = {
+		7AF872BE25EB1D160040C76B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,17 +411,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		B5A6F46825EAD59300AD24BC /* Release */ = {
+		7AF872BF25EB1D160040C76B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -406,184 +464,244 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7AF872C125EB1D160040C76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harnessbudget.Harness;
+				PRODUCT_NAME = Harness;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AF872C225EB1D160040C76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harnessbudget.Harness;
+				PRODUCT_NAME = Harness;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B5A6F46A25EAD59300AD24BC /* Debug */ = {
+		7AF872C425EB1D160040C76B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Harness/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Harness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.Harness;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Harness;
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B5A6F46B25EAD59300AD24BC /* Release */ = {
+		7AF872C525EB1D160040C76B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Harness/Preview Content\"";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Harness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.Harness;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Harness;
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		B5A6F46D25EAD59300AD24BC /* Debug */ = {
+		7AF872C725EB1D160040C76B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RS9STLVLD;
-				INFOPLIST_FILE = HarnessTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benaubin.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harness.app/Harness";
+				TEST_TARGET_NAME = "Harness (iOS)";
 			};
 			name = Debug;
 		};
-		B5A6F46E25EAD59300AD24BC /* Release */ = {
+		7AF872C825EB1D160040C76B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RS9STLVLD;
-				INFOPLIST_FILE = HarnessTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benaubin.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Harness.app/Harness";
+				TEST_TARGET_NAME = "Harness (iOS)";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B5A6F47025EAD59300AD24BC /* Debug */ = {
+		7AF872CA25EB1D160040C76B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RS9STLVLD;
-				INFOPLIST_FILE = HarnessUITests/Info.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessUITests;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benaubin.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Harness;
+				TEST_TARGET_NAME = "Harness (macOS)";
 			};
 			name = Debug;
 		};
-		B5A6F47125EAD59300AD24BC /* Release */ = {
+		7AF872CB25EB1D160040C76B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RS9STLVLD;
-				INFOPLIST_FILE = HarnessUITests/Info.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessUITests;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benaubin.Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Harness;
+				TEST_TARGET_NAME = "Harness (macOS)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5A6F43F25EAD59100AD24BC /* Build configuration list for PBXProject "Harness" */ = {
+		7AF8728D25EB1D140040C76B /* Build configuration list for PBXProject "Harness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5A6F46725EAD59300AD24BC /* Debug */,
-				B5A6F46825EAD59300AD24BC /* Release */,
+				7AF872BE25EB1D160040C76B /* Debug */,
+				7AF872BF25EB1D160040C76B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5A6F46925EAD59300AD24BC /* Build configuration list for PBXNativeTarget "Harness" */ = {
+		7AF872C025EB1D160040C76B /* Build configuration list for PBXNativeTarget "Harness (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5A6F46A25EAD59300AD24BC /* Debug */,
-				B5A6F46B25EAD59300AD24BC /* Release */,
+				7AF872C125EB1D160040C76B /* Debug */,
+				7AF872C225EB1D160040C76B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5A6F46C25EAD59300AD24BC /* Build configuration list for PBXNativeTarget "HarnessTests" */ = {
+		7AF872C325EB1D160040C76B /* Build configuration list for PBXNativeTarget "Harness (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5A6F46D25EAD59300AD24BC /* Debug */,
-				B5A6F46E25EAD59300AD24BC /* Release */,
+				7AF872C425EB1D160040C76B /* Debug */,
+				7AF872C525EB1D160040C76B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5A6F46F25EAD59300AD24BC /* Build configuration list for PBXNativeTarget "HarnessUITests" */ = {
+		7AF872C625EB1D160040C76B /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5A6F47025EAD59300AD24BC /* Debug */,
-				B5A6F47125EAD59300AD24BC /* Release */,
+				7AF872C725EB1D160040C76B /* Debug */,
+				7AF872C825EB1D160040C76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AF872C925EB1D160040C76B /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AF872CA25EB1D160040C76B /* Debug */,
+				7AF872CB25EB1D160040C76B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B5A6F43C25EAD59100AD24BC /* Project object */;
+	rootObject = 7AF8728A25EB1D140040C76B /* Project object */;
 }
