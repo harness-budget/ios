@@ -33,9 +33,20 @@ struct DashboardView: View {
                                     .padding(.horizontal, 12.0)
                                 ScrollView(.horizontal) {
                                     HStack(alignment: .top){
-                                        GoalRingView(goalProgress: Binding.constant(0.45), goalValue: Binding.constant(300_00), goalName: Binding.constant("New Computer"))
-                                        GoalRingView(goalProgress: Binding.constant(0.45), goalValue: Binding.constant(300_00), goalName: Binding.constant("Valentine’s Day"))
-                                        GoalRingView(goalProgress: Binding.constant(0.45), goalValue: Binding.constant(300_00), goalName: Binding.constant("Rent"))
+                                        ForEach(data.currentUser!.envelopes, id: \.id) { (envelope) in
+                                            GoalRingView(goalProgress:  Binding(get: {
+                                                let goal = (envelope.goalFractional ?? 0);
+                                                if goal == 0 {
+                                                    return CGFloat(1)
+                                                } else {
+                                                    return CGFloat((envelope.balanceFractional ?? 0) / goal)
+                                                }
+                                            }, set: {_,_ in }), goalValue: Binding(get: {
+                                                (envelope.balanceFractional ?? 0)
+                                            }, set: {_,_ in }), goalName: Binding(get: {
+                                                envelope.name ?? ""
+                                            }, set: {_,_ in }))
+                                        }
                                     }
                                 }
                             }
