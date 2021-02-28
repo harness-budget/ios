@@ -12,6 +12,7 @@ struct EnterCodeView: View {
     @State var code: String = ""
     @State var error: String = ""
     
+    var network: Network
     var onFinish: (String) -> ()
     
     var body: some View {
@@ -31,7 +32,7 @@ struct EnterCodeView: View {
             Spacer()
 
             Button (action: {
-                Network.shared.apollo.perform(mutation: LoginWithPhoneCodeMutation(phoneNumber: phoneNumber, code: code), resultHandler: { res in
+                network.apollo.perform(mutation: LoginWithPhoneCodeMutation(phoneNumber: phoneNumber, code: code), resultHandler: { res in
                     
                     
                     do {
@@ -67,6 +68,6 @@ struct EnterCodeView: View {
 
 struct EnterCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterCodeView(phoneNumber: Binding.constant("(123) 555-5555"), onFinish: {_ in })
+        EnterCodeView(phoneNumber: Binding.constant("(123) 555-5555"), network: Network(), onFinish: {_ in })
     }
 }

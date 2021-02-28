@@ -13,6 +13,8 @@ struct LoginView: View {
     
     @State private var shouldEnterCode = false
     
+    var network: Network
+    
     var onFinish: (String) -> ()
 
     var body: some View {
@@ -24,10 +26,10 @@ struct LoginView: View {
 					.fixedSize(horizontal: false, vertical: true)
 				Spacer()
                 
-                NavigationLink("", destination: EnterCodeView(phoneNumber: $phoneNumber, onFinish: onFinish), isActive: $shouldEnterCode)
+                NavigationLink("", destination: EnterCodeView(phoneNumber: $phoneNumber, network: Network(), onFinish: onFinish), isActive: $shouldEnterCode)
 				
                 Button (action: {
-                    Network.shared.apollo.perform(mutation: SendLoginCodeMutation(phone: phoneNumber), resultHandler: {_ in
+                    network.apollo.perform(mutation: SendLoginCodeMutation(phone: phoneNumber), resultHandler: {_ in
                         shouldEnterCode = true
                     })
                 }, label: {
@@ -53,6 +55,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView( onFinish: {_ in })
+        LoginView( network: Network(), onFinish: {_ in })
     }
 }

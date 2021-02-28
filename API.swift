@@ -4,6 +4,135 @@
 import Apollo
 import Foundation
 
+public final class DashboardQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query Dashboard {
+      currentUser {
+        __typename
+        safeToSpend {
+          __typename
+          fractional
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "Dashboard"
+
+  public init() {
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("currentUser", type: .object(CurrentUser.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(currentUser: CurrentUser? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "currentUser": currentUser.flatMap { (value: CurrentUser) -> ResultMap in value.resultMap }])
+    }
+
+    public var currentUser: CurrentUser? {
+      get {
+        return (resultMap["currentUser"] as? ResultMap).flatMap { CurrentUser(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "currentUser")
+      }
+    }
+
+    public struct CurrentUser: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["User"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("safeToSpend", type: .nonNull(.object(SafeToSpend.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(safeToSpend: SafeToSpend) {
+        self.init(unsafeResultMap: ["__typename": "User", "safeToSpend": safeToSpend.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// Money available in accounts that is not set aside
+      public var safeToSpend: SafeToSpend {
+        get {
+          return SafeToSpend(unsafeResultMap: resultMap["safeToSpend"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "safeToSpend")
+        }
+      }
+
+      public struct SafeToSpend: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["Money"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("fractional", type: .nonNull(.scalar(Int.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(fractional: Int) {
+          self.init(unsafeResultMap: ["__typename": "Money", "fractional": fractional])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var fractional: Int {
+          get {
+            return resultMap["fractional"]! as! Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "fractional")
+          }
+        }
+      }
+    }
+  }
+}
+
 public final class LoginWithPhoneCodeMutation: GraphQLMutation {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
