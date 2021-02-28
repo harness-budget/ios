@@ -31,18 +31,19 @@ struct ContentView: View {
 				Spacer()
 			}
 			.navigationTitle("Your Spending")
-			.toolbar {
+			.navigationBarItems(trailing:
+				HStack() {
+				
+				Button("Link Plaid") {
+					print("afsd tapped!")
+				}
+				
 				Button(action: {
 					print("Settings tapped!")
 				}) {
 					Image(systemName: "gear")
 				}
-				Button(action: {
-					print("Settings tapped!")
-				}) {
-					Text("Link Plaid")
-				}
-			}
+			})
 		}
 	}
 }
