@@ -9,7 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-		SpendRingView(goalProgress: Binding.constant(CGFloat(0.50)), spendProgress: Binding.constant(CGFloat(0.20)), fundsRemaining: Binding.constant(30024))
+		NavigationView{
+			VStack{
+			SpendRingView(goalProgress: Binding.constant(CGFloat(0.80)), spendProgress: Binding.constant(CGFloat(0.70)), fundsRemaining: Binding.constant(30024))
+				
+				
+			}
+			.navigationTitle("Your Spending")
+			.toolbar {
+				Button(action: {
+					print("Settings tapped!")
+				}) {
+					Image(systemName: "gear")
+				}
+			}
+		}
     }
 }
 
