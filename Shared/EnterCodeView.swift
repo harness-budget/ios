@@ -25,6 +25,7 @@ struct EnterCodeView: View {
 
             TextField("Verification code", text: $code)
                 .textContentType(.oneTimeCode)
+				.keyboardType(.numberPad)
                 .font(.title)
                 .minimumScaleFactor(0.5)
                 .scaledToFit()

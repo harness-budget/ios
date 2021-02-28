@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import KeychainAccess
 
 struct DashboardView: View {
     var network: Network
@@ -46,8 +47,15 @@ struct DashboardView: View {
                     .navigationBarItems(trailing:
                         HStack() {
                         
-                        Button("Link Plaid") {
-                            print("afsd tapped!")
+                        Button("Delete Plaid Token") {
+							do {
+								try Keychain(server: "https://harnessbudget.com", protocolType: .https)
+									.accessibility(.whenUnlocked)
+									.remove("harness-budget-token")
+								print("removed keychain item")
+							} catch let error {
+								print("error: \(error)")
+							}
                         }
                         
                         Button(action: {
