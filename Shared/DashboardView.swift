@@ -12,11 +12,12 @@ import LinkKit
 
 struct DashboardView: View {
     var network: Network
-    
+	@State var shouldShowPlaid: Bool
     @State var data: DashboardQuery.Data?
     
 	var body: some View {
 		NavigationView {
+			
             if let data = self.data {
                 VStack{
                     SpendRingView(
@@ -55,6 +56,8 @@ struct DashboardView: View {
                         }
                         Spacer()
                     }
+					.sheet(isPresented: $shouldShowPlaid) { LinkController(network: network)
+					}
                     .navigationTitle("Your Spending")
                     .navigationBarItems(trailing:
                         HStack() {
@@ -93,6 +96,7 @@ struct DashboardView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-        DashboardView(network: Network())
+		DashboardView(network: Network(), shouldShowPlaid: false)
+		DashboardView(network: Network(), shouldShowPlaid: true)
 	}
 }

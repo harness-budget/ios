@@ -18,13 +18,14 @@ enum AppState {
 struct HarnessApp: App {
     @State var network: Network = Network()
     @State var state: AppState = .Unauthenticated
-    
+    @State var shouldShowPlaid = false
+	
 	var body: some Scene {
 		WindowGroup {
             if network.authenticated {
-                DashboardView(network: network)
+                DashboardView(network: network, shouldShowPlaid: shouldShowPlaid)
             } else {
-                LoginView(network: network, onFinish: { authToken in
+				LoginView(shouldShowPlaid: $shouldShowPlaid, network: network, onFinish: { authToken in
                     do {
                         try Keychain(server: "https://harnessbudget.com", protocolType: .https)
                             .accessibility(.whenUnlocked)

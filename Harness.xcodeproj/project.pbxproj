@@ -605,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K769B885DM;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,7 +617,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessBudget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwelsh.HarnessBudget;
 				PRODUCT_NAME = Harness;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -631,7 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K769B885DM;
+				DEVELOPMENT_TEAM = XUU6S8AF7L;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benaubin.HarnessBudget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwelsh.HarnessBudget;
 				PRODUCT_NAME = Harness;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

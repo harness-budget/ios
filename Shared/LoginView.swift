@@ -10,6 +10,7 @@ import PhoneNumberKit
 
 struct LoginView: View {
     @State private var phoneNumber: String? = nil
+	@Binding var shouldShowPlaid: Bool
     
     var network: Network
     
@@ -29,6 +30,7 @@ struct LoginView: View {
                 if phoneNumber != nil {
                     NavigationLink("", destination: EnterCodeView(
                         phoneNumber: phoneNumber!,
+						shouldShowPlaid: $shouldShowPlaid,
                         network: network,
                         onFinish: onFinish
                     ), isActive: Binding.constant(true))
@@ -62,6 +64,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView( network: Network(), onFinish: {_ in })
+		LoginView( shouldShowPlaid: Binding.constant(true), network: Network(), onFinish: {_ in })
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EnterCodeView: View {
     var phoneNumber: String
+	@Binding var shouldShowPlaid: Bool
     @State var code: String = ""
     @State var error: String = ""
     
@@ -24,14 +25,15 @@ struct EnterCodeView: View {
             Spacer()
 
             TextField("Verification code", text: $code)
-                .textContentType(.oneTimeCode)
 				.keyboardType(.numberPad)
+				.textContentType(.oneTimeCode)
                 .font(.title)
                 .minimumScaleFactor(0.5)
                 .scaledToFit()
 
             Spacer()
 
+			
             Button (action: {
                 network.apollo.perform(mutation: LoginWithPhoneCodeMutation(phoneNumber: phoneNumber, code: code), resultHandler: { res in
                     
@@ -39,6 +41,7 @@ struct EnterCodeView: View {
                     do {
                         let data = try res.get().data!.loginWithPhoneCode!;
                         if let authToken = data.authToken {
+							shouldShowPlaid = true
                             onFinish(authToken)
                         } else {
                             error = data.errors!.joined(separator: " ")
@@ -55,7 +58,7 @@ struct EnterCodeView: View {
                         .padding()
                     Spacer()
                 }
-                .cornerRadius(8.0)
+                .cornerRadius(12.0)
             })
             .background(Color.blue)
             .foregroundColor(.white)
@@ -69,6 +72,6 @@ struct EnterCodeView: View {
 
 struct EnterCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterCodeView(phoneNumber: "(123) 555-5555", network: Network(), onFinish: {_ in })
+		EnterCodeView(phoneNumber: "(123) 555-5555", shouldShowPlaid: Binding.constant(true), network: Network(), onFinish: {_ in })
     }
 }
