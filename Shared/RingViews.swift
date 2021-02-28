@@ -56,20 +56,33 @@ struct SpendRingView: View {
 struct GoalRingView: View {
 	@Binding var goalProgress: CGFloat
 	@Binding var goalValue: Int
+	@Binding var goalName: String
 	
 	var body: some View {
-		ZStack {
-			RingView(progress: $goalProgress, strokeWidth: 12, color: Color(red: 0.208, green: 0.565, blue: 0.953))
-				.frame(width: 64.0, height: 64.0)
-			HStack(alignment: .bottom, spacing: 0.0) {
-				Text(goalValue < 1_000_00 ? "$\(goalValue / 100)" : "$\(goalValue / 100_000)k")
-					.font(.body)
-					.fontWeight(.semibold)
-					.scaledToFill()
-					.minimumScaleFactor(0.5)
-			}
-			.frame(width: 45.0)
-		}.frame(width: 64.0, height: 64.0)
+		VStack {
+			ZStack {
+				RingView(progress: $goalProgress, strokeWidth: 12, color: Color(red: 0.208, green: 0.565, blue: 0.953))
+					.frame(width: 64.0, height: 64.0)
+				HStack(alignment: .bottom, spacing: 0.0) {
+					Text(goalValue < 1_000_00 ? "$\(goalValue / 100)" : "$\(goalValue / 100_000)k")
+						.font(.body)
+						.fontWeight(.semibold)
+						.scaledToFill()
+						.minimumScaleFactor(0.5)
+				}
+				.frame(width: 45.0)
+			}.frame(width: 64.0, height: 64.0)
+			
+			Text(goalName)
+				.font(.body)
+				.fontWeight(.semibold)
+				.multilineTextAlignment(.center)
+				.lineLimit(2)
+				.fixedSize(horizontal: false, vertical: true)
+			
+		}
+		.padding(.vertical, 8.0)
+		.frame(width: 96.0)
 	}
 }
 
@@ -77,6 +90,6 @@ struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
 		SpendRingView(goalProgress: Binding.constant(CGFloat(0.3)), spendProgress: Binding.constant(CGFloat(0.8)), fundsRemaining: Binding.constant(10000024))
-		GoalRingView(goalProgress: Binding.constant(CGFloat(0.3)), goalValue: Binding.constant(300_00))
+		GoalRingView(goalProgress: Binding.constant(CGFloat(0.3)), goalValue: Binding.constant(300_00), goalName: Binding.constant("Goal"))
     }
 }
