@@ -1,0 +1,5 @@
+mutation CreatePlaidLinkToken {
+    createPlaidLinkToken(input: {}) {
+      linkToken
+    }
+}

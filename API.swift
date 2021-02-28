@@ -4,6 +4,93 @@
 import Apollo
 import Foundation
 
+public final class CreatePlaidLinkTokenMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation CreatePlaidLinkToken {
+      createPlaidLinkToken(input: {}) {
+        __typename
+        linkToken
+      }
+    }
+    """
+
+  public let operationName: String = "CreatePlaidLinkToken"
+
+  public init() {
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("createPlaidLinkToken", arguments: ["input": [:]], type: .object(CreatePlaidLinkToken.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(createPlaidLinkToken: CreatePlaidLinkToken? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "createPlaidLinkToken": createPlaidLinkToken.flatMap { (value: CreatePlaidLinkToken) -> ResultMap in value.resultMap }])
+    }
+
+    /// Create a Plaid link token. User must be able to link accounts.
+    public var createPlaidLinkToken: CreatePlaidLinkToken? {
+      get {
+        return (resultMap["createPlaidLinkToken"] as? ResultMap).flatMap { CreatePlaidLinkToken(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "createPlaidLinkToken")
+      }
+    }
+
+    public struct CreatePlaidLinkToken: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["CreatePlaidLinkTokenPayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("linkToken", type: .nonNull(.scalar(String.self))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(linkToken: String) {
+        self.init(unsafeResultMap: ["__typename": "CreatePlaidLinkTokenPayload", "linkToken": linkToken])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var linkToken: String {
+        get {
+          return resultMap["linkToken"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "linkToken")
+        }
+      }
+    }
+  }
+}
+
 public final class DashboardQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
@@ -236,6 +323,141 @@ public final class DashboardQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "balanceFractional")
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class LinkPlaidAccountMutation: GraphQLMutation {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    mutation LinkPlaidAccount($publicToken: String!) {
+      linkPlaidAccount(input: {publicToken: $publicToken}) {
+        __typename
+        bankAccount {
+          __typename
+          name
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "LinkPlaidAccount"
+
+  public var publicToken: String
+
+  public init(publicToken: String) {
+    self.publicToken = publicToken
+  }
+
+  public var variables: GraphQLMap? {
+    return ["publicToken": publicToken]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Mutation"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("linkPlaidAccount", arguments: ["input": ["publicToken": GraphQLVariable("publicToken")]], type: .object(LinkPlaidAccount.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(linkPlaidAccount: LinkPlaidAccount? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "linkPlaidAccount": linkPlaidAccount.flatMap { (value: LinkPlaidAccount) -> ResultMap in value.resultMap }])
+    }
+
+    public var linkPlaidAccount: LinkPlaidAccount? {
+      get {
+        return (resultMap["linkPlaidAccount"] as? ResultMap).flatMap { LinkPlaidAccount(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "linkPlaidAccount")
+      }
+    }
+
+    public struct LinkPlaidAccount: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["LinkPlaidAccountPayload"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("bankAccount", type: .object(BankAccount.selections)),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(bankAccount: BankAccount? = nil) {
+        self.init(unsafeResultMap: ["__typename": "LinkPlaidAccountPayload", "bankAccount": bankAccount.flatMap { (value: BankAccount) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var bankAccount: BankAccount? {
+        get {
+          return (resultMap["bankAccount"] as? ResultMap).flatMap { BankAccount(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "bankAccount")
+        }
+      }
+
+      public struct BankAccount: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["BankAccount"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("name", type: .nonNull(.scalar(String.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(name: String) {
+          self.init(unsafeResultMap: ["__typename": "BankAccount", "name": name])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var name: String {
+          get {
+            return resultMap["name"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
           }
         }
       }

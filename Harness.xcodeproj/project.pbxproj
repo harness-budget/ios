@@ -29,6 +29,9 @@
 		7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 		7AF872D125EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */; };
 		7AF872D225EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B538EF6725EBBEC300CAD86F /* CreatePlaidLinkToken.graphql in Sources */ = {isa = PBXBuildFile; fileRef = B538EF6625EBBEC300CAD86F /* CreatePlaidLinkToken.graphql */; };
+		B538EF6F25EBC2EE00CAD86F /* LinkPlaidAccount.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B538EF6E25EBC2EE00CAD86F /* LinkPlaidAccount.graphql */; };
+		B538EF9F25EBC8CF00CAD86F /* LinkKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B538EF9325EBC89C00CAD86F /* LinkKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5623C1625EB741D004B27D1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5623C1525EB741D004B27D1 /* API.swift */; };
 		B5623C1725EB741D004B27D1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5623C1525EB741D004B27D1 /* API.swift */; };
 		B5623C1C25EB79D5004B27D1 /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */; };
@@ -38,6 +41,7 @@
 		B5623C2925EB933E004B27D1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B5623C2825EB933E004B27D1 /* KeychainAccess */; };
 		B5623C2E25EB962F004B27D1 /* DashboardQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */; };
 		B5623C2F25EB962F004B27D1 /* DashboardQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */; };
+		B5623C6025EBB860004B27D1 /* LinkPlaid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5623C5F25EBB860004B27D1 /* LinkPlaid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B538EF9F25EBC8CF00CAD86F /* LinkKit.xcframework in Embed Frameworks */,
 				7AF872D225EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Embed Frameworks */,
 				497E5AEA25EB65330088B1BD /* Apollo-Dynamic in Embed Frameworks */,
 			);
@@ -92,10 +97,14 @@
 		7AF872B125EB1D160040C76B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF872B525EB1D160040C76B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7AF872B725EB1D160040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B538EF6625EBBEC300CAD86F /* CreatePlaidLinkToken.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CreatePlaidLinkToken.graphql; sourceTree = "<group>"; };
+		B538EF6E25EBC2EE00CAD86F /* LinkPlaidAccount.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LinkPlaidAccount.graphql; sourceTree = "<group>"; };
+		B538EF9325EBC89C00CAD86F /* LinkKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LinkKit.xcframework; sourceTree = "<group>"; };
 		B5623C1525EB741D004B27D1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
 		B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoginWithPhoneCode.graphql; sourceTree = "<group>"; };
 		B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = DashboardQuery.graphql; sourceTree = "<group>"; };
+		B5623C5F25EBB860004B27D1 /* LinkPlaid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPlaid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +145,14 @@
 		7AF8728925EB1D140040C76B = {
 			isa = PBXGroup;
 			children = (
+				B538EF9325EBC89C00CAD86F /* LinkKit.xcframework */,
 				7AF8728E25EB1D140040C76B /* Shared */,
 				7AF8729825EB1D150040C76B /* iOS */,
 				7AF8729F25EB1D150040C76B /* macOS */,
 				7AF872A925EB1D150040C76B /* Tests iOS */,
 				7AF872B425EB1D160040C76B /* Tests macOS */,
 				7AF8729725EB1D150040C76B /* Products */,
+				B538EF9825EBC8AE00CAD86F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +171,9 @@
 				B5623C1B25EB79D5004B27D1 /* EnterCodeView.swift */,
 				B5623C2125EB7F45004B27D1 /* LoginWithPhoneCode.graphql */,
 				B5623C2D25EB962F004B27D1 /* DashboardQuery.graphql */,
+				B5623C5F25EBB860004B27D1 /* LinkPlaid.swift */,
+				B538EF6625EBBEC300CAD86F /* CreatePlaidLinkToken.graphql */,
+				B538EF6E25EBC2EE00CAD86F /* LinkPlaidAccount.graphql */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -208,6 +222,13 @@
 				7AF872B725EB1D160040C76B /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		B538EF9825EBC8AE00CAD86F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +370,7 @@
 				B5623C2225EB7F45004B27D1 /* LoginWithPhoneCode.graphql in Resources */,
 				B5623C2E25EB962F004B27D1 /* DashboardQuery.graphql in Resources */,
 				497E5AFC25EB679E0088B1BD /* SendLoginCode.graphql in Resources */,
+				B538EF6F25EBC2EE00CAD86F /* LinkPlaidAccount.graphql in Resources */,
 				7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,10 +429,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF872BA25EB1D160040C76B /* DashboardView.swift in Sources */,
+				B538EF6725EBBEC300CAD86F /* CreatePlaidLinkToken.graphql in Sources */,
 				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
 				B5623C1C25EB79D5004B27D1 /* EnterCodeView.swift in Sources */,
 				4905EF3925EB6BE9005E3A19 /* Network.swift in Sources */,
 				7A4BBFA325EB4D8D00389944 /* PhoneTextView.swift in Sources */,
+				B5623C6025EBB860004B27D1 /* LinkPlaid.swift in Sources */,
 				7A4BBF9525EB430700389944 /* LoginView.swift in Sources */,
 				7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */,
 				B5623C1625EB741D004B27D1 /* API.swift in Sources */,
@@ -583,6 +607,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K769B885DM;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,6 +633,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K769B885DM;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

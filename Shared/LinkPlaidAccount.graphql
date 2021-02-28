@@ -1,0 +1,8 @@
+
+mutation LinkPlaidAccount($publicToken: String!) {
+    linkPlaidAccount(input: {publicToken: $publicToken}) {
+        bankAccount {
+            name
+        }
+    }
+}

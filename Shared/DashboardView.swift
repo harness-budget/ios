@@ -7,6 +7,8 @@
 
 import SwiftUI
 import KeychainAccess
+import LinkKit
+
 
 struct DashboardView: View {
     var network: Network
@@ -15,7 +17,6 @@ struct DashboardView: View {
     
 	var body: some View {
 		NavigationView {
-            
             if let data = self.data {
                 VStack{
                     SpendRingView(
