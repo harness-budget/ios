@@ -22,7 +22,7 @@ struct HarnessApp: App {
 	var body: some Scene {
 		WindowGroup {
             if network.authenticated {
-                ContentView(network: network)
+                DashboardView(network: network)
             } else {
                 LoginView(network: network, onFinish: { authToken in
                     do {

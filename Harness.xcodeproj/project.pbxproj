@@ -23,8 +23,8 @@
 		7AF872B625EB1D160040C76B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872B525EB1D160040C76B /* Tests_macOS.swift */; };
 		7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
 		7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
-		7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
-		7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* ContentView.swift */; };
+		7AF872BA25EB1D160040C76B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* DashboardView.swift */; };
+		7AF872BB25EB1D160040C76B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8729025EB1D140040C76B /* DashboardView.swift */; };
 		7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 		7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8729125EB1D150040C76B /* Assets.xcassets */; };
 		7AF872D125EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */; };
@@ -79,7 +79,7 @@
 		7A4BBF9425EB430700389944 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextView.swift; sourceTree = "<group>"; };
 		7AF8728F25EB1D140040C76B /* HarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessApp.swift; sourceTree = "<group>"; };
-		7AF8729025EB1D140040C76B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AF8729025EB1D140040C76B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7AF8729125EB1D150040C76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF8729625EB1D150040C76B /* Harness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF8729925EB1D150040C76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			children = (
 				B5623C1525EB741D004B27D1 /* API.swift */,
 				7AF8728F25EB1D140040C76B /* HarnessApp.swift */,
-				7AF8729025EB1D140040C76B /* ContentView.swift */,
+				7AF8729025EB1D140040C76B /* DashboardView.swift */,
 				7A4BBF9425EB430700389944 /* LoginView.swift */,
 				7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */,
 				7AF8729125EB1D150040C76B /* Assets.xcassets */,
@@ -406,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872BA25EB1D160040C76B /* DashboardView.swift in Sources */,
 				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
 				B5623C1C25EB79D5004B27D1 /* EnterCodeView.swift in Sources */,
 				4905EF3925EB6BE9005E3A19 /* Network.swift in Sources */,
@@ -421,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */,
+				7AF872BB25EB1D160040C76B /* DashboardView.swift in Sources */,
 				7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */,
 				B5623C1D25EB79D5004B27D1 /* EnterCodeView.swift in Sources */,
 				4905EF3A25EB6BE9005E3A19 /* Network.swift in Sources */,
