@@ -12,8 +12,9 @@ import PhoneNumberKit
 struct PhoneTextView: UIViewRepresentable {
 	typealias UIViewControllerType = PhoneNumberTextField
 	
+    var textView = PhoneNumberTextField()
+    
 	public func makeUIView(context: Context) -> PhoneNumberTextField {
-		let textView = PhoneNumberTextField()
 		textView.withFlag = true
 		textView.withPrefix = true
 		textView.withExamplePlaceholder = true

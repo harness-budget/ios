@@ -16,7 +16,7 @@ struct Network {
     init() {
         let authToken = try? Keychain(server: "https://harnessbudget.com", protocolType: .https)
                 .accessibility(.whenUnlocked)
-                .get("harness-budget-token")
+                .get("harness-budget-tokena")
         
         var headers: [String:String] = [:]
         if let authToken = authToken {

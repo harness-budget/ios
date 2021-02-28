@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EnterCodeView: View {
-    @Binding var phoneNumber: String
+    var phoneNumber: String
     @State var code: String = ""
     @State var error: String = ""
     
@@ -68,6 +68,6 @@ struct EnterCodeView: View {
 
 struct EnterCodeView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterCodeView(phoneNumber: Binding.constant("(123) 555-5555"), network: Network(), onFinish: {_ in })
+        EnterCodeView(phoneNumber: "(123) 555-5555", network: Network(), onFinish: {_ in })
     }
 }
