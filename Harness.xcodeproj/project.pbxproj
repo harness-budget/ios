@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4905EF3925EB6BE9005E3A19 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905EF3825EB6BE9005E3A19 /* Network.swift */; };
+		4905EF3A25EB6BE9005E3A19 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905EF3825EB6BE9005E3A19 /* Network.swift */; };
+		497E5AE925EB65330088B1BD /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 497E5AE825EB65330088B1BD /* Apollo-Dynamic */; };
+		497E5AEA25EB65330088B1BD /* Apollo-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 497E5AE825EB65330088B1BD /* Apollo-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		497E5AFC25EB679E0088B1BD /* SendLoginCode.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 497E5AFB25EB679E0088B1BD /* SendLoginCode.graphql */; };
+		497E5AFD25EB679E0088B1BD /* SendLoginCode.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 497E5AFB25EB679E0088B1BD /* SendLoginCode.graphql */; };
 		7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
 		7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
 		7A4BBF9525EB430700389944 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF9425EB430700389944 /* LoginView.swift */; };
@@ -50,6 +56,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7AF872D225EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Embed Frameworks */,
+				497E5AEA25EB65330088B1BD /* Apollo-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4905EF3825EB6BE9005E3A19 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		497E5AFB25EB679E0088B1BD /* SendLoginCode.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SendLoginCode.graphql; sourceTree = "<group>"; };
 		7A4BBF8D25EB22F000389944 /* RingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViews.swift; sourceTree = "<group>"; };
 		7A4BBF9425EB430700389944 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextView.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF872D125EB4FAC0040C76B /* PhoneNumberKit-Dynamic in Frameworks */,
+				497E5AE925EB65330088B1BD /* Apollo-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +140,8 @@
 				7A4BBFA225EB4D8D00389944 /* PhoneTextView.swift */,
 				7AF8729125EB1D150040C76B /* Assets.xcassets */,
 				7A4BBF8D25EB22F000389944 /* RingViews.swift */,
+				497E5AFB25EB679E0088B1BD /* SendLoginCode.graphql */,
+				4905EF3825EB6BE9005E3A19 /* Network.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AF872C025EB1D160040C76B /* Build configuration list for PBXNativeTarget "Harness (iOS)" */;
 			buildPhases = (
+				497E5AEE25EB653E0088B1BD /* Apollo */,
 				7AF8729225EB1D150040C76B /* Sources */,
 				7AF8729325EB1D150040C76B /* Frameworks */,
 				7AF8729425EB1D150040C76B /* Resources */,
@@ -199,6 +212,7 @@
 			name = "Harness (iOS)";
 			packageProductDependencies = (
 				7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */,
+				497E5AE825EB65330088B1BD /* Apollo-Dynamic */,
 			);
 			productName = "Harness (iOS)";
 			productReference = 7AF8729625EB1D150040C76B /* Harness.app */;
@@ -293,6 +307,7 @@
 			mainGroup = 7AF8728925EB1D140040C76B;
 			packageReferences = (
 				7AF872CF25EB4FAC0040C76B /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				497E5AE725EB65330088B1BD /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 7AF8729725EB1D150040C76B /* Products */;
 			projectDirPath = "";
@@ -311,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497E5AFC25EB679E0088B1BD /* SendLoginCode.graphql in Resources */,
 				7AF872BC25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497E5AFD25EB679E0088B1BD /* SendLoginCode.graphql in Resources */,
 				7AF872BD25EB1D160040C76B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +356,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		497E5AEE25EB653E0088B1BD /* Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Apollo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=https://api.harnessbudget.com/graphql schema.json\n\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AF8729225EB1D150040C76B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,6 +384,7 @@
 			files = (
 				7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */,
 				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
+				4905EF3925EB6BE9005E3A19 /* Network.swift in Sources */,
 				7A4BBFA325EB4D8D00389944 /* PhoneTextView.swift in Sources */,
 				7A4BBF9525EB430700389944 /* LoginView.swift in Sources */,
 				7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */,
@@ -358,6 +397,7 @@
 			files = (
 				7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */,
 				7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */,
+				4905EF3A25EB6BE9005E3A19 /* Network.swift in Sources */,
 				7A4BBFA425EB4D8D00389944 /* PhoneTextView.swift in Sources */,
 				7A4BBF9625EB430700389944 /* LoginView.swift in Sources */,
 				7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */,
@@ -513,7 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				DEVELOPMENT_TEAM = 4WS57GHV59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -521,7 +561,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harnessbudget.Harness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Harness;
 				PRODUCT_NAME = Harness;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -535,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				DEVELOPMENT_TEAM = 4WS57GHV59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -543,7 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harnessbudget.Harness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.Harness;
 				PRODUCT_NAME = Harness;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -560,7 +600,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				DEVELOPMENT_TEAM = 4WS57GHV59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -584,7 +624,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XUU6S8AF7L;
+				DEVELOPMENT_TEAM = 4WS57GHV59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -740,6 +780,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		497E5AE725EB65330088B1BD /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.41.0;
+			};
+		};
 		7AF872CF25EB4FAC0040C76B /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit.git";
@@ -751,6 +799,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		497E5AE825EB65330088B1BD /* Apollo-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 497E5AE725EB65330088B1BD /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = "Apollo-Dynamic";
+		};
 		7AF872D025EB4FAC0040C76B /* PhoneNumberKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7AF872CF25EB4FAC0040C76B /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;

@@ -1,0 +1,6 @@
+mutation sendLoginCode($phone: String!) {
+  sendLoginCode(input:{phoneNumber:$phone}) {
+    errors
+    success
+  }
+}
