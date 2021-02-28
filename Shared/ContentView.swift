@@ -18,6 +18,7 @@ struct ContentView: View {
 						Text("Set aside")
 							.font(.title2)
 							.fontWeight(.semibold)
+							.padding(.horizontal, 12.0)
 						ScrollView(.horizontal) {
 							HStack(alignment: .top){
 								GoalRingView(goalProgress: Binding.constant(0.45), goalValue: Binding.constant(300_00), goalName: Binding.constant("New Computer"))
@@ -27,7 +28,6 @@ struct ContentView: View {
 						}
 					}
 				}
-				.padding(.horizontal, 12.0)
 				Spacer()
 			}
 			.navigationTitle("Your Spending")

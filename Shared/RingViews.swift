@@ -79,7 +79,6 @@ struct GoalRingView: View {
 				.multilineTextAlignment(.center)
 				.lineLimit(2)
 				.fixedSize(horizontal: false, vertical: true)
-			
 		}
 		.padding(.vertical, 8.0)
 		.frame(width: 96.0)

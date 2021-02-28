@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
 		7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF8D25EB22F000389944 /* RingViews.swift */; };
+		7A4BBF9525EB430700389944 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF9425EB430700389944 /* LoginView.swift */; };
+		7A4BBF9625EB430700389944 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4BBF9425EB430700389944 /* LoginView.swift */; };
 		7AF872AB25EB1D150040C76B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872AA25EB1D150040C76B /* Tests_iOS.swift */; };
 		7AF872B625EB1D160040C76B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF872B525EB1D160040C76B /* Tests_macOS.swift */; };
 		7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8728F25EB1D140040C76B /* HarnessApp.swift */; };
@@ -38,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7A4BBF8D25EB22F000389944 /* RingViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViews.swift; sourceTree = "<group>"; };
+		7A4BBF9425EB430700389944 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7AF8728F25EB1D140040C76B /* HarnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarnessApp.swift; sourceTree = "<group>"; };
 		7AF8729025EB1D140040C76B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7AF8729125EB1D150040C76B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 			children = (
 				7AF8728F25EB1D140040C76B /* HarnessApp.swift */,
 				7AF8729025EB1D140040C76B /* ContentView.swift */,
+				7A4BBF9425EB430700389944 /* LoginView.swift */,
 				7AF8729125EB1D150040C76B /* Assets.xcassets */,
 				7A4BBF8D25EB22F000389944 /* RingViews.swift */,
 			);
@@ -314,6 +318,7 @@
 			files = (
 				7AF872BA25EB1D160040C76B /* ContentView.swift in Sources */,
 				7AF872B825EB1D160040C76B /* HarnessApp.swift in Sources */,
+				7A4BBF9525EB430700389944 /* LoginView.swift in Sources */,
 				7A4BBF8E25EB22F000389944 /* RingViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +329,7 @@
 			files = (
 				7AF872BB25EB1D160040C76B /* ContentView.swift in Sources */,
 				7AF872B925EB1D160040C76B /* HarnessApp.swift in Sources */,
+				7A4BBF9625EB430700389944 /* LoginView.swift in Sources */,
 				7A4BBF8F25EB22F000389944 /* RingViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
