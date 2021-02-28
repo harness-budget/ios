@@ -58,7 +58,7 @@ struct DashboardView: View {
                     .navigationBarItems(trailing:
                         HStack() {
                         
-                        Button("Delete Plaid Token") {
+                        Button("Logout") {
 							do {
 								try Keychain(server: "https://harnessbudget.com", protocolType: .https)
 									.accessibility(.whenUnlocked)
