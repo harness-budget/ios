@@ -2,5 +2,7 @@
 query Dashboard {
     currentUser {
         safeToSpend { fractional }
+        safeToSpendFraction
+        goalMetFraction
     }
 }

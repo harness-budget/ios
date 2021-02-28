@@ -15,6 +15,8 @@ public final class DashboardQuery: GraphQLQuery {
           __typename
           fractional
         }
+        safeToSpendFraction
+        goalMetFraction
       }
     }
     """
@@ -59,6 +61,8 @@ public final class DashboardQuery: GraphQLQuery {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("safeToSpend", type: .nonNull(.object(SafeToSpend.selections))),
+          GraphQLField("safeToSpendFraction", type: .nonNull(.scalar(Double.self))),
+          GraphQLField("goalMetFraction", type: .nonNull(.scalar(Double.self))),
         ]
       }
 
@@ -68,8 +72,8 @@ public final class DashboardQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(safeToSpend: SafeToSpend) {
-        self.init(unsafeResultMap: ["__typename": "User", "safeToSpend": safeToSpend.resultMap])
+      public init(safeToSpend: SafeToSpend, safeToSpendFraction: Double, goalMetFraction: Double) {
+        self.init(unsafeResultMap: ["__typename": "User", "safeToSpend": safeToSpend.resultMap, "safeToSpendFraction": safeToSpendFraction, "goalMetFraction": goalMetFraction])
       }
 
       public var __typename: String {
@@ -88,6 +92,26 @@ public final class DashboardQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue.resultMap, forKey: "safeToSpend")
+        }
+      }
+
+      /// Not sure what this means yet, lol. Range: [0, 1]
+      public var safeToSpendFraction: Double {
+        get {
+          return resultMap["safeToSpendFraction"]! as! Double
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "safeToSpendFraction")
+        }
+      }
+
+      /// The percent of goals met. Range: [0, 1]
+      public var goalMetFraction: Double {
+        get {
+          return resultMap["goalMetFraction"]! as! Double
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "goalMetFraction")
         }
       }
 

@@ -17,11 +17,14 @@ struct DashboardView: View {
             
             if let data = self.data {
                 VStack{
-                    SpendRingView(goalProgress: Binding.constant(CGFloat(0.80)), spendProgress: Binding.constant(CGFloat(0.70)), fundsRemaining: Binding(
-                        get: { data.currentUser!.safeToSpend.fractional },
-                        set: {_,_ in }
-                            )
-                        ).padding(.top, 36.0)
+                    SpendRingView(
+                        goalProgress: Binding(get: { CGFloat(data.currentUser!.goalMetFraction)},set: {_,_ in }),
+                        spendProgress: Binding(get: { CGFloat(data.currentUser!.safeToSpendFraction)},set: {_,_ in }),
+                        fundsRemaining: Binding(
+                            get: { data.currentUser!.safeToSpend.fractional },
+                            set: {_,_ in }
+                        )
+                    ).padding(.top, 36.0)
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Set aside")
